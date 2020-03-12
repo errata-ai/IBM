@@ -1,0 +1,173 @@
+extends: existence
+message: "Check word usage guideline."
+link: 'https://www.ibm.com/developerworks/library/styleguidelines/index.html#wordlist'
+ignorecase: true
+level: warning
+tokens:
+  - about
+  - above
+  - across
+  - actionable
+  - allow
+  - alpha
+  - alphabetic
+  - alphabetical
+  - and so on
+  - architect
+  - architected
+  - as
+  - as well as
+  - assembler
+  - attach
+  - below
+  - best-of-breed
+  - between
+  - billion
+  - bitness
+  - black box
+  - board
+  - both
+  - bring up
+  - business partner
+  - cache
+  - camel case
+  - carry out
+  - catch
+  - central processing unit
+  - check
+  - choose
+  - combination box
+  - combo box
+  - command console
+  - Common Base Event
+  - complete
+  - congratulations
+  - connect
+  - consumability
+  - consume
+  - could
+  - CPU
+  - customers
+  - daughterboard
+  - decompress
+  - decompressed
+  - deploy
+  - designed to
+  - display
+  - domestic
+  - done
+  - due to
+  - either
+  - EPUB
+  - execute
+  - fatal
+  - foo
+  - foobar
+  - fubar
+  - foreign
+  - free
+  - freeze
+  - functionality
+  - geography
+  - green screen
+  - guarantee
+  - hard boot
+  - hash
+  - hash sign
+  - higher
+  - hit
+  - hover help
+  - if...then
+  - illegal
+  - impact
+  - infocenter
+  - info center
+  - information center
+  - ingest
+  - internationalize
+  - invoke
+  - itself
+  - Java Development Kit (JDK)
+  - kill
+  - latest
+  - legacy
+  - let
+  - like
+  - lite
+  - localize
+  - look and feel
+  - look-and-feel
+  - machine
+  - master and slave
+  - migrate
+  - native
+  - neither ... nor
+  - new
+  - once
+  - out-of-the-box
+  - overhead
+  - panel
+  - partner
+  - permit
+  - please
+  - pop-up help
+  - pop-up menu
+  - pound sign
+  - program temporary fix
+  - proper
+  - pull-down
+  - quote
+  - quoted
+  - Redbook
+  - Redbooks
+  - redbook
+  - redbooks
+  - refer to
+  - repair
+  - reside
+  - respective
+  - respectively
+  - (s)
+  - select
+  - selected
+  - should
+  - simply
+  - since
+  - slave
+  - so
+  - soft boot
+  - Solution Partnership Centers
+  - some
+  - store
+  - system
+  - tab
+  - text field
+  - text entry field
+  - that
+  - themselves
+  - then
+  - there is
+  - there are
+  - this means
+  - through
+  - throw
+  - throwable
+  - time to value
+  - time-tested
+  - translate
+  - trillion
+  - twistie
+  - twisty
+  - uncompressed
+  - unmount
+  - updatable
+  - upgrade
+  - users
+  - using
+  - very
+  - we
+  - where
+  - whether or not
+  - which
+  - while
+  - would
