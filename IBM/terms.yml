@@ -3,27 +3,52 @@ message: Consider using '%s' instead of '%s'
 link: 'https://www.ibm.com/developerworks/library/styleguidelines/index.html#wordlist'
 level: error
 ignorecase: true
+action:
+  name: replace
 # swap maps tokens in form of bad: good
 swap:
-  a lot of: many|much
-  a lot: many|much
+  '(?:Ctrl|control)-click': press Ctrl and click
+  'a lot(?: of)?': many|much
+  'backward(?:-)?compatible': compatible with earlier versions
+  'bottom(?:-)?left': lower left|lower-left
+  'bottom(?:-)?right': lower right|lower-right
+  'down(?:-)?level': earlier|previous|not at the latest level
+  'mash(?: )?up': create
+  'pop-up (?:blocker|killer)': software to block pop-up ad windows
+  're(?:-)?occur': recur
+  'sort(?:-|/)?merge': sort|merge
+  'top(?:-)?left': upper left|upper right|upper-left|upper-right
+  'top(?:-)?right': upper left|upper right|upper-left|upper-right
+
+  # These need to be implemented in a separate file since they include word
+  # boundaries ('.').
+  #
+  # See https://github.com/errata-ai/Microsoft/blob/master/Microsoft/Foreign.yml
+  #
+  # e.g.: for example|such as
+  # etc.: and so on
+  # i.e.: that is
+  # vs.: versus|compared to
+
+  # These are currenly invalid patterns.
+  #
+  # dismiss (a window, a dialog box): close
+  # position (a cursor): move
+  # spawn (a process): create
+  # strike (a key): press|type
+  # touch (a key): press|type
+
   a number of: several
   abort: cancel|stop
   administrate: administer
   all caps: uppercase
-  and/or: a or b|a b or both
+  and/or: a or b|a, b, or both
   as long as: if|provided that
   as per: according to|as|as in
   back-level: earlier|previous|not at the latest level
-  backward compatible: compatible with earlier versions
-  backward-compatible: compatible with earlier versions
   Big Blue: IBM
   blink: flash
   blue screen of death: stop error
-  bottom right: lower right|lower-right
-  bottom-right: lower right|lower-right
-  bottom left: lower left|lower-left
-  bottom-left: lower left|lower-left
   breadcrumbing: breadcrumb trail
   canned: preplanned|preconfigured|predefined
   case insensitive: not case-sensitive
@@ -39,10 +64,8 @@ swap:
   connect with: connect to
   context menu: menu|pop-up menu
   contextual help: help|context-sensitive help
-  control-click: press Ctrl and click
   crash: fail|lock up|stop|stop responding
   CRUD: create retrieve update and delete
-  Ctrl-click: press Ctrl and click
   customer: client
   datum: data
   debuggable: debug
@@ -55,41 +78,35 @@ swap:
   deregister: unregister
   desire: want|required
   destroy: delete from the database
-  dismiss (a window, a dialog box): close
   dismount: demount|unmount|remove
   do: complete|perform
   downgrade: upgrade|fallback|fall back|rollback|roll back
-  downlevel: earlier|previous|not at the latest level
-  down-level: earlier|previous|not at the latest level
   downward compatible: compatible with earlier versions
   drag and drop: drag
   drill up: navigate
   e-fix: fix|interim fix
   eFix: fix|interim fix
-  e.g.: for example|such as
   end user: user
   end-user interface: graphical interface|interface
-  etc.: and so on
   EUI: graphical user interface|interface
   expose: display|show|make available
   fill in: complete|enter|specify
   fixed disk drive: hard disk drive
   flavor: version|method
-  floppy: diskette|diskette drive
   floppy disk: diskette|diskette drive
   floppy drive: diskette|diskette drive
+  floppy: diskette|diskette drive
   forward compatible: compatible with later versions
   gzip: compress
   gzipped: archive|compressed file
   hard drive: hard disk|hard disk drive
   hard file: hard disk|hard disk drive
   hence: therefore
-  i.e.: that is
+  i-fix: interim fix
+  i-Fix: interim fix
   IBM's: IBM's|IBM's AIX
   ifix: interim fix
-  i-fix: interim fix
   iFix: interim fix
-  i-Fix: interim fix
   in order to: to
   in other words: for example|that is
   in spite of: regardless of|despite
@@ -105,16 +122,12 @@ swap:
   keep in mind: remember
   key: type|press
   laptop: notebook
-  via: through
-  versus: compared to
   launch: start|open
   left-hand: left
   let's: let us
   leverage: use
   line cord: power cable|power cord
   main directory: root directory
-  mash up: create
-  mashup: create
   memory stick: USB flash drive
   microcomputer: PC
   motherboard: system board
@@ -123,31 +136,27 @@ swap:
   non-English: in languages other than English|non-English-language
   nonrecoverable: unrecoverable
   notion: concept
+  off-premise: on-premises|off-premises|onsite|offsite
   offline storage: auxiliary storage
   okay: OK
   on ramp: access method
-  on-ramp: access method
   on the fly: dynamically|as needed|in real time|immediately
   on the other hand: however|alternatively|conversely
   on-premise: on-premises|off-premises|onsite|offsite
-  off-premise: on-premises|off-premises|onsite|offsite
+  on-ramp: access method
   pain point: challenge|concern|difficulty|issue
   parent task: parent process
   patch: fix|test fix|interim fix|fix pack|program temporary fix
   perimeter network: DMZ
   phone: telephone|cell phone|mobile phone
-  pop-up blocker: software to block pop-up ad windows
-  pop-up killer: software to block pop-up ad windows
-  position (a cursor): move
-  power on: turn on|turn off
-  power off: turn on|turn off
   power down: turn on|turn off
+  power off: turn on|turn off
+  power on: turn on|turn off
   preload: preinstall|preinstalled
   preloaded: preinstall|preinstalled
   prepend: add a prefix to
   prior to: before
   recommend: suggest
-  reoccur (or re-occur): recur
   retry: retry|try again
   right double-click: double right-click
   right-hand: right
@@ -159,18 +168,13 @@ swap:
   shift-click: press Shift and click
   ship: include|included
   Simple Object Access Protocol: SOAP
-  single quote: single quotation mark
   single quote mark: single quotation mark
+  single quote: single quotation mark
   SME routine: session management exit routine
-  sort merge: sort|merge
-  sort-merge: sort|merge
-  sort/merge: sort|merge
-  spawn (a process): create
   start up: start
-  strike (a key): press|type
   sunset: withdraw from service|withdraw from marketing|discontinue|no longer support
-  switch on: power on|turn on|power off|turn off
   switch off: power on|turn on|power off|turn off
+  switch on: power on|turn on|power off|turn off
   tar: compress|archive
   tarball: tar file
   terminate: end|stop
@@ -179,11 +183,6 @@ swap:
   thus: therefore
   toggle off: toggle
   tooling: tools
-  top left: upper left|upper right|upper-left|upper-right
-  top right: upper left|upper right|upper-left|upper-right
-  top-left: upper left|upper right|upper-left|upper-right
-  top-right: upper left|upper right|upper-left|upper-right
-  touch (a key): press|type
   touchscreen: touch-sensitive screen
   transition: make the transition|move|migrate|change
   transparent: indiscernible|not visible
@@ -198,11 +197,11 @@ swap:
   upward compatible: compatible with later versions
   utilize: use
   version: create a version|assign a version number
-  vs.: versus|compared to
+  versus: compared to
+  via: through
   warning notice: attention notice
   web-enable: enable for the web
   webinar: webinar|webcast|web seminar|web-based event
-  Webinar: webinar|webcast|web seminar|web-based event
   wish: want
   zero out: zero
   zip: zip|compress

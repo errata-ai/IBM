@@ -1,9 +1,18 @@
 extends: existence
-message: "Check word usage guideline."
+message: "Verify your use of '%s' with the word usage guidelines."
 link: 'https://www.ibm.com/developerworks/library/styleguidelines/index.html#wordlist'
 ignorecase: true
 level: warning
 tokens:
+  # This need its own rule since it doesn't have a left-hand word boundary.
+  # - (s)
+
+  # These also need their own rule:
+  # - neither ... nor
+  # - if...then
+
+  - 'pop-up (?:help|menu)'
+  - 'redbook(:s)?'
   - about
   - above
   - across
@@ -63,10 +72,10 @@ tokens:
   - fatal
   - foo
   - foobar
-  - fubar
   - foreign
   - free
   - freeze
+  - fubar
   - functionality
   - geography
   - green screen
@@ -77,17 +86,16 @@ tokens:
   - higher
   - hit
   - hover help
-  - if...then
   - illegal
   - impact
-  - infocenter
   - info center
+  - infocenter
   - information center
   - ingest
   - internationalize
   - invoke
   - itself
-  - Java Development Kit (JDK)
+  - Java Development Kit \(JDK\)
   - kill
   - latest
   - legacy
@@ -101,7 +109,6 @@ tokens:
   - master and slave
   - migrate
   - native
-  - neither ... nor
   - new
   - once
   - out-of-the-box
@@ -110,24 +117,17 @@ tokens:
   - partner
   - permit
   - please
-  - pop-up help
-  - pop-up menu
   - pound sign
   - program temporary fix
   - proper
   - pull-down
   - quote
   - quoted
-  - Redbook
-  - Redbooks
-  - redbook
-  - redbooks
   - refer to
   - repair
   - reside
   - respective
   - respectively
-  - (s)
   - select
   - selected
   - should
@@ -141,13 +141,13 @@ tokens:
   - store
   - system
   - tab
-  - text field
   - text entry field
+  - text field
   - that
   - themselves
   - then
-  - there is
   - there are
+  - there is
   - this means
   - through
   - throw
