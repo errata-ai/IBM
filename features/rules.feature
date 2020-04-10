@@ -15,3 +15,10 @@ Feature: Rules
         test.md:3:1:IBM.Usage:Verify your use of 'We' with the word usage guidelines.
         test.md:3:17:IBM.Usage:Verify your use of 'deploy' with the word usage guidelines.
         """
+
+    Scenario: Focus on reader
+        When I test "SecondPerson"
+        Then the output should contain exactly:
+        """
+        test.md:3:37:IBM.SecondPerson:Try to use second person (you) when speaking to or about the reader.
+        """
