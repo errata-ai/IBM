@@ -1,0 +1,7 @@
+extends: consistency
+message: "Try to use second person (you) when speaking to or about the reader."
+level: warning
+link: https://www.ibm.com/developerworks/library/styleguidelines/#N10050
+nonword: false
+either:
+  we: you
