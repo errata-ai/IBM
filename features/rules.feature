@@ -32,3 +32,10 @@ Feature: Rules
         test.md:5:31:IBM.Latin:Use 'that is' instead of 'i.e.,'.
         test.md:7:6:IBM.Latin:Use 'versus' instead of 'vs.'.
         """
+
+    Scenario: Capitalization
+        When I test "Capitalization"
+        Then the output should contain exactly:
+        """
+        test.md:9:4:IBM.Headings:'Lambda Expressions' should use sentence-style capitalization.
+        """
