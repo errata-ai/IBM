@@ -21,6 +21,7 @@ Feature: Rules
         Then the output should contain exactly:
         """
         test.md:3:10:IBM.Ellipses:Avoid the ellipsis (...) except to indicate omitted words.
+        test.md:3:32:IBM.Ellipses:Avoid the ellipsis (...) except to indicate omitted words.
         """
 
     Scenario: Use of Latin abbreviations
