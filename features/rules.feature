@@ -37,5 +37,7 @@ Feature: Rules
         When I test "Capitalization"
         Then the output should contain exactly:
         """
-        test.md:9:4:IBM.Headings:'Lambda Expressions' should use sentence-style capitalization.
+        test.md:9:5:IBM.Headings:'Lambda Expressions' should use sentence-style capitalization.
+        test.md:13:21:IBM.Definitions:Define acronyms and abbreviations (such as 'MDBs') on first occurrence if they're likely to be unfamiliar.
+        test.md:19:224:IBM.Definitions:Define acronyms and abbreviations (such as 'DAFB') on first occurrence if they're likely to be unfamiliar.
         """
