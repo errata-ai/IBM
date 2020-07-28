@@ -45,3 +45,10 @@ Feature: Rules
         test.md:13:21:IBM.Definitions:Define acronyms and abbreviations (such as 'MDBs') on first occurrence if they're likely to be unfamiliar.
         test.md:19:224:IBM.Definitions:Define acronyms and abbreviations (such as 'DAFB') on first occurrence if they're likely to be unfamiliar.
         """
+
+    Scenario: Content Structure
+        When I test "Structure"
+        Then the output should contain exactly:
+        """
+        test.md:5:1:IBM.SentenceLength:Try to keep sentences less than 25 words.
+        """
