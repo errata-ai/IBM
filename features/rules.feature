@@ -25,6 +25,7 @@ Feature: Rules
         test.md:9:1:IBM.Abbreviations:Do not use periods in all-uppercase abbreviations such as 'I.B.M.'.
         test.md:11:1:IBM.Abbreviations:Do not use periods in all-uppercase abbreviations such as 'S.W.A.T.'.
         test.md:17:1:IBM.OxfordComma:Use the Oxford comma in 'It comes in red, blue and'.
+        test.md:23:14:IBM.DashSpacing:Add spaces around the dash in 'a—w'.
         """
 
     Scenario: Use of Latin abbreviations
