@@ -15,10 +15,19 @@ Feature: Rules
         test.md:3:1:IBM.Usage:Verify your use of 'We' with the word usage guidelines.
         test.md:3:17:IBM.Usage:Verify your use of 'deploy' with the word usage guidelines.
         """
-    
+
     Scenario: Use of punctuation
         When I test "Punctuation"
         Then the output should contain exactly:
         """
         test.md:3:10:IBM.Ellipses:Avoid the ellipsis (...) except to indicate omitted words.
+        """
+
+    Scenario: Use of Latin abbreviations
+        When I test "Latin"
+        Then the output should contain exactly:
+        """
+        test.md:3:10:IBM.Latin:Use 'and so on' instead of 'etc.'.
+        test.md:5:31:IBM.Latin:Use 'that is' instead of 'i.e.,'.
+        test.md:7:6:IBM.Latin:Use 'versus' instead of 'vs.'.
         """

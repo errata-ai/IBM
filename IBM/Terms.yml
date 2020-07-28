@@ -20,16 +20,6 @@ swap:
   'top(?:-)?left': upper left|upper right|upper-left|upper-right
   'top(?:-)?right': upper left|upper right|upper-left|upper-right
 
-  # These need to be implemented in a separate file since they include word
-  # boundaries ('.').
-  #
-  # See https://github.com/errata-ai/Microsoft/blob/master/Microsoft/Foreign.yml
-  #
-  # e.g.: for example|such as
-  # etc.: and so on
-  # i.e.: that is
-  # vs.: versus|compared to
-
   # These are currenly invalid patterns.
   #
   # dismiss (a window, a dialog box): close
